@@ -385,7 +385,7 @@ function getTheDate(increment) {
 
   document.getElementById("SwipeSpinner").hidden = false;
   
-  window.location = "/views.php?date="+yyyy+"-"+mm+"-"+dd+"&view=Daily+Charts";
+  window.location = "views.php?date="+yyyy+"-"+mm+"-"+dd+"&view=Daily+Charts";
 }
 
 function installKeyAndSwipeEventHandler() {
