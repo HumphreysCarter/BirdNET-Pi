@@ -7,6 +7,13 @@ if (strpos($requestUri, '/api/v1/') === 0) {
   die();
 }
 
+// Serve manifest.json directly
+if ($requestUri === '/manifest.json') {
+    header('Content-Type: application/json');
+    readfile(__DIR__ . '/manifest.json');
+    die();
+}
+
 /* Prevent XSS input */
 $_GET   = filter_input_array(INPUT_GET, FILTER_SANITIZE_STRING);
 $_POST  = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
@@ -22,6 +29,12 @@ set_timezone();
 <title><?php echo $site_name; ?></title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link id="iconLink" rel="shortcut icon" sizes=85x85 href="images/bird.png" />
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#77c487">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="BirdNET-Pi">
+<link rel="apple-touch-icon" href="images/birdnet_icon_180x180.png">
 <link rel="stylesheet" href="<?php echo $color_scheme . '?v=' . date('n.d.y', filemtime($color_scheme)); ?>">
 <link rel="stylesheet" type="text/css" href="static/dialog-polyfill.css" />
 <body>

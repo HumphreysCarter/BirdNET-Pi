@@ -1,0 +1,17 @@
+{
+  "name": "BirdNET-Pi",
+  "short_name": "BirdNET-Pi",
+  "description": "A realtime acoustic bird classification system",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "theme_color": "#77c487",
+  "background_color": "#000000",
+  "icons": [
+    {
+      "src": "images/birdnet_icon_180x180.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}
