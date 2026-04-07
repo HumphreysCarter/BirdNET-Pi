@@ -62,7 +62,7 @@ if (get_included_files()[0] === __FILE__) {
   {
     $comname = preg_replace('/ /', '_', $results['Com_Name']);
     $comname = preg_replace('/\'/', '', $comname);
-    $filename = "/By_Date/".$results['Date']."/".$comname."/".$results['File_Name'];
+    $filename = "By_Date/".$results['Date']."/".$comname."/".$results['File_Name'];
     $birds[] = $results['Com_Name'];
     $values[] = get_label($results, $_GET['sort']);
   }
@@ -143,7 +143,7 @@ while($results=$result3->fetchArray(SQLITE3_ASSOC)){
   $comname = preg_replace('/ /', '_', $results['Com_Name']);
   $comname = preg_replace('/\'/', '', $comname);
   $linkname = preg_replace('/_/', '+', $dbsciname);
-  $filename = "/By_Date/".$date."/".$comname."/".$results['File_Name'];
+  $filename = "By_Date/".$date."/".$comname."/".$results['File_Name'];
   $engname = get_com_en_name($sciname);
 
   $info_url = get_info_url($results['Sci_Name']);
@@ -198,7 +198,7 @@ while($results=$result->fetchArray(SQLITE3_ASSOC))
 {
 $comname = preg_replace('/ /', '_', $results['Com_Name']);
 $comname = preg_replace('/\'/', '', $comname);
-$filename = "/By_Date/".$results['Date']."/".$comname."/".$results['File_Name'];
+$filename = "By_Date/".$results['Date']."/".$comname."/".$results['File_Name'];
 
 array_push($excludelines, $results['Date']."/".$comname."/".$results['File_Name']);
 array_push($excludelines, $results['Date']."/".$comname."/".$results['File_Name'].".png");

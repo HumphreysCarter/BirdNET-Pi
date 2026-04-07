@@ -224,11 +224,11 @@ function toggleShiftFreq(filename, shiftAction, elem) {
 	console.log("shifted freqs of " + filename);
         const audioDiv = elem.parentNode.querySelector(".custom-audio-player");
         if (audioDiv) {
-          audioDiv.setAttribute("data-audio-src", audioDiv.getAttribute("data-audio-src").replace("/By_Date/", "/By_Date/shifted/"));
+          audioDiv.setAttribute("data-audio-src", audioDiv.getAttribute("data-audio-src").replace("By_Date/", "By_Date/shifted/"));
         } else {
           const atag = elem.parentNode.querySelector("a");
           if (atag) {
-            atag.setAttribute("href", atag.getAttribute("href").replace("/By_Date/", "/By_Date/shifted/"));
+            atag.setAttribute("href", atag.getAttribute("href").replace("By_Date/", "By_Date/shifted/"));
           }
         }
       } else {
@@ -238,11 +238,11 @@ function toggleShiftFreq(filename, shiftAction, elem) {
         console.log("unshifted freqs of " + filename);
         const audioDiv = elem.parentNode.querySelector(".custom-audio-player");
         if (audioDiv) {
-          audioDiv.setAttribute("data-audio-src", audioDiv.getAttribute("data-audio-src").replace("/By_Date/shifted/", "/By_Date/"));
+          audioDiv.setAttribute("data-audio-src", audioDiv.getAttribute("data-audio-src").replace("By_Date/shifted/", "By_Date/"));
         } else {
           const atag = elem.parentNode.querySelector("a");
           if (atag) {
-            atag.setAttribute("href", atag.getAttribute("href").replace("/By_Date/shifted/", "/By_Date/"));
+            atag.setAttribute("href", atag.getAttribute("href").replace("By_Date/shifted/", "By_Date/"));
           }
         }
       }
@@ -551,8 +551,8 @@ echo "<table>
     $comname = preg_replace('/ /', '_', $results['Com_Name']);
     $comname = preg_replace('/\'/', '', $comname);
     $date = $results['Date'];
-    $filename = "/By_Date/".$date."/".$comname."/".$results['File_Name'];
-    $filename_shifted = "/By_Date/shifted/".$date."/".$comname."/".$results['File_Name'];
+    $filename = "By_Date/".$date."/".$comname."/".$results['File_Name'];
+    $filename_shifted = "By_Date/shifted/".$date."/".$comname."/".$results['File_Name'];
     $filename_png = $filename . ".png";
     $sciname = preg_replace('/ /', '_', $results['Sci_Name']);
     $sci_name = $results['Sci_Name'];
@@ -655,8 +655,8 @@ echo "<table>
         $comname = preg_replace('/ /', '_', $results['Com_Name']);
         $comname = preg_replace('/\'/', '', $comname);
         $date = $results['Date'];
-        $filename = "/By_Date/".$date."/".$comname."/".$results['File_Name'];
-        $filename_shifted = "/By_Date/shifted/".$date."/".$comname."/".$results['File_Name'];
+        $filename = "By_Date/".$date."/".$comname."/".$results['File_Name'];
+        $filename_shifted = "By_Date/shifted/".$date."/".$comname."/".$results['File_Name'];
         $filename_png = $filename . ".png";
         $sciname = preg_replace('/ /', '_', $results['Sci_Name']);
         $sci_name = $results['Sci_Name'];
